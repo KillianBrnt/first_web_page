@@ -32,4 +32,4 @@ but don't just copy paste it, try to understand.
 ### exercice 2 : main page
 
 In this exercice you will start from scratch, it's up to you to choose the look of the main.ejs page, the only mandatory  
-is to display the user.username variable (wich contain the name of the actual user logged in) sent by the backend.
+are to display the user.username variable (wich contain the name of the actual user logged in) sent by the backend and do a logout button.
