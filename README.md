@@ -15,6 +15,8 @@ The purpose of this workshop is to teach you how to create your first website fr
 
 - Then go to : localhost:8080 in your browser
 
+- you can quit the docker by running ctrl + c twice
+
 ## The exercice
 
 You will have to design the three page available in the views directory (login.ejs, signup.ejs, main.ejs).
