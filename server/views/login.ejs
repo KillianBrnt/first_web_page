@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+</head>
+<body>
+<div class="page">
+  <div class="container">
+      <div class="form">
+      <form action="/login" method="post">
+        <label for="email">Name</label>
+        <input type="text" id="email" name="username">
+        <label for="password">Password</label>
+        <input type="password" id="password", name="password">
+        <input type="submit" id="submit" value="Submit">
+        <% if(message.length > 0) { %>
+            <div class="alert alert-danger"><%= message %></div>
+        <% } %>
+    </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
