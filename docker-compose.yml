@@ -1,0 +1,44 @@
+version: "3.4"
+services:
+    app:
+      build: ./server
+      depends_on:
+        - db-app
+      ports:
+        - "8080:3000"
+      networks:
+        - result-tier
+      volumes:
+        - ./server:/server
+      environment:
+        - SESSION_SECRET=secret
+        - PORT=3000
+        - DATABASE_HOST=db-app
+        - DATABASE_PASSWORD=mysql
+      command: ./wait-for.sh db-app:3306 -- node server.js
+
+    db-app:
+      container_name: db
+      image: mysql:5.7.28
+      restart: always
+      ports:
+        - "3000:3306"
+      networks:
+        - result-tier
+      environment:
+        - MYSQL_DATABASE=db
+        - MYSQL_ROOT_PASSWORD=mysql
+        - MYSQL_USER=USER
+        - MYSQL_USER_PASSWORD=password
+      expose:
+        - '3306'
+      volumes:
+        - db-data:/var/lib/mysql
+        - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+networks:
+  result-tier:
+    driver: bridge
+
+volumes:
+  db-data:
