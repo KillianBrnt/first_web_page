@@ -21,6 +21,7 @@ The purpose of this workshop is to teach you how to create your first website
 
 You will have to design the three page available in the views directory (login.ejs, signup.ejs, main.ejs).
 
+--------------------------------------
 ### exercice 1 : login and signup page
 
 The main html code allowing the login and signup action is already existing, your only goal here is to  
@@ -29,6 +30,7 @@ give a better look to the page using css and javascript (feel free to add more h
 The simplest way to find some nice looking css is to go on https://codepen.io/ and use already existing code on your page  
 but don't just copy paste it, try to understand.
 
+--------------------------------------
 ### exercice 2 : main page
 
 let's now talk about the main part of this project. Your goal here will be to implement rating systeme about restaurant as you can see on google map.
