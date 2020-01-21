@@ -1,6 +1,6 @@
 # Your first web site
 
-The purpose of this workshop is to teach you how to create your first website front with a premade back
+The purpose of this workshop is to teach you how to create your first website
 
 ## Configuration
 
