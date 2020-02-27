@@ -1,15 +1,11 @@
 module.exports = function(app, passport) {
     app.get('/', function(req, res){
-		res.render('index.ejs');
+		res.render('login.ejs',  {message: req.flash('loginMessage')});
     });
 
-    app.get('/login', function(req, res){
-		res.render('login.ejs', {message:req.flash('loginMessage')});
-    });
-
-	app.post('/login', passport.authenticate('local-login', {
+	app.post('/', passport.authenticate('local-login', {
 		successRedirect: '/main',
-		failureRedirect: '/login',
+		failureRedirect: '/',
 		failureFlash: true
     	}), function(req, res){
 			if(req.body.remember){
